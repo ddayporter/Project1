@@ -1,16 +1,127 @@
+body {
+  background-image: url("paper-background.jpg");
+  font-family: 'Convergence', sans-serif;
+  font-size: 20px;
+}
+
 header, footer {
   text-align: center;
 }
 
 main {
-  max-width: 600px;
+  max-width: 700px;
+  min-height: 500px;
   margin: auto;
+  background-color: rgba(255,239,213,0.5);
 }
 
-.play, .reset {
-  display: inline-block;
-  padding: 15px;
-  margin: 5px;
+footer {
+  clear: left;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #6b4d1c;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-family: 'Alegreya SC', serif;
+  font-size: 80px;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 15px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+}
+
+input {
+  max-width: 125px;
+  padding: 10px 5px;
+  font-size: 25px;
+}
+
+.triviaFont {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-style: italic;
+  font-size: 50px;
+}
+
+.board {
+  max-width: 350px;
+  min-height: 400px;
+  margin-left: 300px;
+  padding: 30px;
+}
+
+.beta {
+  max-width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.decoration {
+  max-height: 80px;
+  position: absolute;
+  top: 39%;
+  right: 12%;
+}
+
+.housekeeping {
+  text-align: center;
+  font-size: 25px;
+}
+
+.buttons {
+  /*position: absolute;
+  top: 55%;
+  left: 60%;*/
+}
+
+.play {
   position: relative;
-  left: 38%;
+  left: 20%;
+  background: green;
+  }
+
+.reset {
+  position: relative;
+  left: 18%;
+  background: rgb(186,56,56);
+  /*display: inline-block;*/
+  /*position: relative;
+  left: 28%;*/
+}
+
+.next {
+  position: relative;
+  left: 30%;
+  background: #6b4d1c;
+}
+
+.submit {
+  background: white;
+  color: green;
+}
+
+.leftImage {
+  float: left;
+  min-width: 33%;
+  /*max-height: 400px;*/
+  /*margin-bottom: 50px;*/
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.correctAnswer {
+  color: green;
+}
+
+.wrongAnswer {
+  color: red;
 }
