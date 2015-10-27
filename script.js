@@ -111,12 +111,13 @@ $( document ).ready( function () {
     }
 
   function printAnswer() {
+    $(".submit").off();
     console.log("Input value is " + $('input').val() + ".");
     console.log("Value of i is currently " + i + ".");
     if ($('input').val() == easyQuestions[i].answer) {
       // console.log("Correct!");
       $(".answer").html("Correct!");
-      score = score + easyQuestions[i].points;
+      score = score + 2;
       console.log("Right answer. Score is " + score);
     } else {
       // console.log("Wrong!");
@@ -133,13 +134,16 @@ $( document ).ready( function () {
   } // printAnswer closure
 
   function nextQuestion() {
+    $(".next").off();
     $(".answer").html("");
+    $("input").val("");
     console.log("Next button clicked");
     console.log("Input value is " + $('input').val() + ".");
     console.log("Value of i is currently " + i + ".");
     i++;
-    console.log("Value of i is currently " + i + ".");
+    console.log("i++. Value of i is currently " + i + ".");
     if (i < easyQuestions.length) {
+      console.log("question: " + easyQuestions[i].question);
       printQuestion();
     } else {
       triviaEnd();
