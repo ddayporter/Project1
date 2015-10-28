@@ -3,7 +3,8 @@ body {
   background-size: cover;
   font-family: 'Convergence', sans-serif;
   font-size: 20px;
-  color: papayawhip;
+  color: #DBDBDB;
+  /*color: #E5D7BF;*/
   text-shadow: 1px 0 5px #4F4E4E;
 }
 
@@ -51,7 +52,7 @@ button {
   margin: 15px;
   /*border: 1px solid #2d6898;*/
   font-size: 20px;
-  color: #fff;
+  color: #DBDBDB;
   background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
   background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
   background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
@@ -78,7 +79,7 @@ input {
   max-width: 125px;
   padding: 10px 5px;
   font-size: 25px;
-  background: papayawhip;
+  background: #DBDBDB;
 }
 
 /*.sky {
@@ -156,7 +157,7 @@ input {
 }
 
 .submit {
-  background: papayawhip;
+  background: #DBDBDB;
   color: green;
 }
 
@@ -175,13 +176,11 @@ input {
 .correctAnswer {
   padding: 15px;
   background: green;
-  color: #fff;
 }
 
 .wrongAnswer {
   padding: 15px;
-  background: red;
-  color: #fff;
+  background: rgb(186,56,56);
 }
 
 .final {
