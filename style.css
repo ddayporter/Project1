@@ -12,6 +12,7 @@ main {
   max-width: 700px;
   min-height: 500px;
   margin: auto;
+  background-color: rgb(255,239,213);
   background-color: rgba(255,239,213,0.5);
 }
 
@@ -26,7 +27,7 @@ footer {
 
 h1 {
   font-family: 'Alegreya SC', serif;
-  font-size: 80px;
+  font-size: 90px;
 }
 
 button {
@@ -43,10 +44,18 @@ input {
   font-size: 25px;
 }
 
+/*.sky {
+ -webkit-mask-image: url("The-Eye-of-the-World-sky.jpg");
+ /*mask-image: url("The-Eye-of-the-World-sky.jpg");
+}*/
+
 .triviaFont {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-style: italic;
   font-size: 50px;
+  position: absolute;
+  top: 28%;
+  right: 53%;
 }
 
 .board {
@@ -75,11 +84,11 @@ input {
   font-size: 25px;
 }
 
-.buttons {
+/*.buttons {
   /*position: absolute;
   top: 55%;
-  left: 60%;*/
-}
+  left: 60%;
+}*/
 
 .play {
   position: relative;
@@ -109,7 +118,8 @@ input {
 
 .leftImage {
   float: left;
-  min-width: 33%;
+  min-width: 30%;
+  padding-top: 20px;
   /*max-height: 400px;*/
   /*margin-bottom: 50px;*/
 }
@@ -119,9 +129,18 @@ input {
 }
 
 .correctAnswer {
-  color: green;
+  padding: 15px;
+  background: green;
+  color: #fff;
 }
 
 .wrongAnswer {
-  color: red;
+  padding: 15px;
+  background: red;
+  color: #fff;
+}
+
+.final {
+  padding-top: 30px;
+  text-align: center;
 }

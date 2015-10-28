@@ -1,7 +1,7 @@
 $( document ).ready( function () {
   $(".answerField").hide();
-  $(".reset").hide();
   $(".results").hide();
+  $(".reset").hide();
   $(".play").on("click", triviaStart);
 }); //document.ready function closure
 
@@ -102,7 +102,7 @@ function triviaStart() {
 
 function firstQuestion() {
   console.log("first question");
-  $(".decoration").attr("src", easyQuestions[0].imageURL)
+  // $(".decoration").attr("src", easyQuestions[0].imageURL)
   $(".housekeeping").html("Question 1/10:");
   $(".question").html(easyQuestions[0].question);
   $(".options").html(easyQuestions[0].options);
@@ -134,10 +134,11 @@ function printAnswer() {
   }
   $(".score").html("Points: " + score);
   $(".answerField").hide();
-  $(".next").on("click", nextQuestion);
+  $(".next").show().on("click", nextQuestion);
 }
 
 function nextQuestion() {
+  $(".answer").removeClass("correctAnswer wrongAnswer");
   $(".next").off();
   $(".answer").html("");
   $("input").val("");
@@ -156,9 +157,10 @@ function nextQuestion() {
 
 function triviaEnd() {
   $('.board').hide();
-  $(document.createElement('p')).html('Your final score was ' + score + '.').appendTo('main');
+  $(document.createElement('p')).addClass("final").html('Your final score was ' + score + '.').appendTo('main');
   toggleMessage();
-  $(document.createElement('p')).html('To play again click "Reset"').appendTo('main');
+  $(document.createElement('p')).html('Thanks for playing! To play again click "Reset"').appendTo('main');
+  $(".reset").show();
 }
 
 function toggleMessage() {
@@ -178,14 +180,18 @@ function resetGame() {
   $(".housekeeping").html("Press PLAY to begin.");
   $("div.game p").empty();
   $(".answer").empty();
-  $(".score").html("Points: 0");
+  $(".score").html("Points: 0").hide();
   $("[type]").val("");
   $('.board').show();
   $("main > p").remove();
-  $(".next").off();
+  $(".reset").hide();
+  $(".next").off().hide();
   $(".play").show();
 }
 
+function toggleImage() {
+
+}
 
 // more advanced features to add:
 // **1 $('.next').html('FINISH').on("click", function() { <-- want Next button
