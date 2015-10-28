@@ -140,6 +140,7 @@ function printAnswer() {
 function nextQuestion() {
   $(".answer").removeClass("correctAnswer wrongAnswer");
   $(".next").off();
+  $(".reset").show();
   $(".answer").html("");
   $("input").val("");
   console.log("Next button clicked");
@@ -160,7 +161,6 @@ function triviaEnd() {
   $(document.createElement('p')).addClass("final").html('Your final score was ' + score + '.').appendTo('main');
   toggleMessage();
   $(document.createElement('p')).html('Thanks for playing! To play again click "Reset"').appendTo('main');
-  $(".reset").show();
 }
 
 function toggleMessage() {
@@ -189,9 +189,9 @@ function resetGame() {
   $(".play").show();
 }
 
-function toggleImage() {
-
-}
+// function toggleImage() {
+// display an image from an array of images - image determined by final score.
+// }
 
 // more advanced features to add:
 // **1 $('.next').html('FINISH').on("click", function() { <-- want Next button
