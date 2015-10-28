@@ -95,7 +95,7 @@ var easyQuestions = [
 function triviaStart() {
   $(".play").hide();
   $(".results").show();
-  $(".reset").on("click", resetGame);
+  $(".reset").show().on("click", resetGame);
   firstQuestion();
 
 }
@@ -140,7 +140,6 @@ function printAnswer() {
 function nextQuestion() {
   $(".answer").removeClass("correctAnswer wrongAnswer");
   $(".next").off();
-  $(".reset").show();
   $(".answer").html("");
   $("input").val("");
   console.log("Next button clicked");

@@ -14,7 +14,7 @@ header, footer {
 
 main {
   max-width: 700px;
-  min-height: 500px;
+  min-height: 555px;
   margin: auto;
   background-color: rgb(255,239,213);
   background-color: rgba(106,124,154,0.65);
@@ -29,7 +29,11 @@ footer {
   /*background: rgb(29,40,58);
   background: rgba(29,40,58,0.75);*/
   color: gray;
-  padding: 20px 50px 10px 50px;
+  padding: 20px 65px 10px 65px;
+}
+
+footer p {
+  line-height:1;
 }
 
 footer a {
@@ -87,6 +91,10 @@ input {
  /*mask-image: url("The-Eye-of-the-World-sky.jpg");
 }*/
 
+.container {
+  overflow: auto;
+}
+
 .firstLetter {
   font-size: 95px;
 
@@ -136,14 +144,19 @@ input {
 }*/
 
 .play {
-  position: relative;
-  left: 20%;
+  margin-top: 55px;
+  margin-left: 155px;
+  /*position: relative;
+  left: 20%;*/
   background: green;
   }
 
 .reset {
-  position: relative;
-  left: 18%;
+  /*display:list-item;*/
+  clear: left;
+  position: absolute;
+  top: 160px;
+  right: 210px;
   background: rgb(186,56,56);
   /*display: inline-block;*/
   /*position: relative;
