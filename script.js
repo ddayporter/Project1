@@ -186,6 +186,7 @@ function resetGame() {
   $("main > p").remove();
   $(".reset").hide();
   $(".next").off().hide();
+  $(".answerField").hide();
   $(".play").show();
 }
 
