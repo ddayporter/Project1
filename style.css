@@ -1,7 +1,11 @@
 body {
-  background-image: url("paper-background.jpg");
+  background-image: url("01-The-Eye-of-the-World-outside.jpg");
+  background-size: cover;
   font-family: 'Convergence', sans-serif;
   font-size: 20px;
+  color: #DBDBDB;
+  /*color: #E5D7BF;*/
+  text-shadow: 1px 0 5px #4F4E4E;
 }
 
 header, footer {
@@ -10,44 +14,91 @@ header, footer {
 
 main {
   max-width: 700px;
-  min-height: 500px;
+  min-height: 555px;
   margin: auto;
   background-color: rgb(255,239,213);
-  background-color: rgba(255,239,213,0.5);
+  background-color: rgba(106,124,154,0.65);
+  /*border: 1px solid rgb(255,239,213);*/
+  border-radius: 5px;
 }
 
 footer {
   clear: left;
   font-family: Arial, sans-serif;
   font-size: 15px;
-  color: #6b4d1c;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  /*background: rgb(29,40,58);
+  background: rgba(29,40,58,0.75);*/
+  color: gray;
+  padding: 20px 65px 10px 65px;
+}
+
+footer p {
+  line-height:1;
+}
+
+footer a {
+  color:inherit;
 }
 
 h1 {
   font-family: 'Alegreya SC', serif;
   font-size: 90px;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+  /*text-shadow: 1px 0 5px #4F4E4E;*/
+  color: papayawhip;
+  -webkit-text-fill-color: papayawhip; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(186,56,56);
 }
 
 button {
   padding: 15px 25px;
   margin: 15px;
-  border-radius: 5px;
+  /*border: 1px solid #2d6898;*/
   font-size: 20px;
-  color: #fff;
+  color: #DBDBDB;
+  background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+  background-image: -ms-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(73,132,180)),
+      color-stop(1, rgb(97,155,203))
+  );
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /*text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0px 6px 0px #2b638f;
+  -moz-box-shadow: 0px 6px 0px #2b638f;
+  box-shadow: 0px 6px 0px #2b638f;*/
 }
 
 input {
   max-width: 125px;
   padding: 10px 5px;
   font-size: 25px;
+  background: #DBDBDB;
 }
 
 /*.sky {
  -webkit-mask-image: url("The-Eye-of-the-World-sky.jpg");
  /*mask-image: url("The-Eye-of-the-World-sky.jpg");
 }*/
+
+.container {
+  overflow: auto;
+}
+
+.firstLetter {
+  font-size: 95px;
+
+}
 
 .triviaFont {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -56,6 +107,8 @@ input {
   position: absolute;
   top: 28%;
   right: 53%;
+  color: rgb(186,56,56);
+  text-shadow: -1px -1px 1px papayawhip, 1px 1px 1px #000;
 }
 
 .board {
@@ -91,14 +144,19 @@ input {
 }*/
 
 .play {
-  position: relative;
-  left: 20%;
+  margin-top: 55px;
+  margin-left: 155px;
+  /*position: relative;
+  left: 20%;*/
   background: green;
   }
 
 .reset {
-  position: relative;
-  left: 18%;
+  /*display:list-item;*/
+  clear: left;
+  position: absolute;
+  top: 160px;
+  right: 210px;
   background: rgb(186,56,56);
   /*display: inline-block;*/
   /*position: relative;
@@ -107,12 +165,12 @@ input {
 
 .next {
   position: relative;
-  left: 30%;
+  left: 20%;
   background: #6b4d1c;
 }
 
 .submit {
-  background: white;
+  background: #DBDBDB;
   color: green;
 }
 
@@ -131,13 +189,11 @@ input {
 .correctAnswer {
   padding: 15px;
   background: green;
-  color: #fff;
 }
 
 .wrongAnswer {
   padding: 15px;
-  background: red;
-  color: #fff;
+  background: rgb(186,56,56);
 }
 
 .final {
