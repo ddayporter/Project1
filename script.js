@@ -6,6 +6,8 @@ $( document ).ready( function () {
 }); //document.ready function closure
 
 var score = 0;
+// mms: what does "i" represent?  currentQuestionIndex?
+// mms: What would change it you had a function called "currentQuestion" that returned an object with question, options, answer, and more?  This function could know which battery of questions to pull from.
 var i = 0;
 
 // use these questions for the "Eye of the World questions only" option in
@@ -91,11 +93,13 @@ var easyQuestions = [
     imageURL: "http://jcsalomon.github.io/wot-chapter-icons/Fang-icon.svg"
   }
 ]
+// mms: ponder what you would chnge if your options were simply an array of text (w/o html).
 
 function triviaStart() {
   $(".play").hide();
   $(".results").show();
   $(".reset").show().on("click", resetGame);
+  // mms: why isn't this printQuestion()?
   firstQuestion();
 
 }
@@ -170,13 +174,15 @@ function toggleMessage() {
   } else if (score >= 18) {
     $(document.createElement('p')).html('Great job! You are a true fan.').appendTo('main');
   }
+  // mms: reduce duplication. I recommend using conditional to pick the message (text only), then you can extract the DOM manipulation to a single line.
+  // $(document.createElement('p')).html(message).appendTo('main');
 }
 
 function resetGame() {
   console.log("reset button clicked");
   score = 0;
   i = 0;
-  $(".housekeeping").html("Press PLAY to begin.");
+  $(".housekeeping").html("Press PLAY to begin."); // mms: nice class name
   $("div.game p").empty();
   $(".answer").empty();
   $(".score").html("Points: 0").hide();
@@ -187,12 +193,14 @@ function resetGame() {
   $(".next").off().hide();
   $(".answerField").hide();
   $(".play").show();
+  // mms: this is a lot to keep track of.  Is some of this duplicated above?  Can we extract a few functions that reset each portion?
 }
 
 // function toggleImage() {
 // display an image from an array of images - image determined by final score.
 // }
 
+// mms: it's good to see this.  Should this move to the stories section in your readme?
 // more advanced features to add:
 // **1 $('.next').html('FINISH').on("click", function() { <-- want Next button
 //    to change to Finish after the last question, need to refactor a bit to
